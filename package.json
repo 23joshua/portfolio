@@ -1,0 +1,27 @@
+{
+  "name": "reset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "gulp": "^4.0.2",
+    "jquery": "^3.6.0",
+    "sass-breakpoints": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.43.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua",
+  "license": "ISC"
+}

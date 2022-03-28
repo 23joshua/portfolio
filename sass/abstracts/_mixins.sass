@@ -1,0 +1,51 @@
+@use 'sass:math'
+
+// header
+@mixin header($ptb, $bgc)
+    padding: $ptb 0px
+    background-color: $bgc
+
+// nav
+@mixin nav($justify)
+    @include flex
+    justify-content: $justify 
+
+// content flex
+@mixin flex
+    width: 100%
+    display: flex
+    flex-wrap: wrap   
+
+// content flex
+// $mt ==> margin-top
+// $mr ==> margin-right
+// $mb ==> margin-bottom
+// $ml ==> margin-left
+@mixin article($column, $bgc, $mtb, $mrl)    
+        padding: 10px
+        margin: $mtb $mrl
+        background-color: $bgc      
+        width: calc((($column * 100%) / 12) - ($mrl * 2))   
+
+// circulo
+@mixin round_content( $size, $circle: false)   
+    @if $circle
+        width: $size
+        height: $size
+        @include round(math.div($size, 2))
+    @else 
+        width: $size
+        height: $size
+
+// background de imagens
+@mixin background_image($img)
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: cover
+    background-image: url('../img/#{$img}')        
+    
+// radius
+@mixin round($round)
+    border-radius: $round
+    -moz-border-radius: $round
+    -webkit-border-radius: $round    

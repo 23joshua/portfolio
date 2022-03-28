@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+
+body
+	background-color: #260424	
+
+img
+	display: block
+	max-width: 100%
+	a
+		border: none
+		background-color: red
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+
+p
+	font-family: $font_family	
+
+.container
+	margin: 0 auto
+	padding: 0 10px
+	width: $container
+	transition: $seconds	
+
+.transition	
+	transition-duration: $seconds
+	-moz-transition-duration: $seconds
+	-webkit-transition-duration: $seconds	

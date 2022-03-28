@@ -1,0 +1,97 @@
+@use '../abstracts/mixins' as *
+@use '../abstracts/variables' as *
+
+%btn_icon
+	width: 35px
+	height: 35px
+	color: #fff
+	align-items: center
+	display: inline-flex
+	background-color: transparent
+	justify-content: center
+
+.btn_facebook
+	background-color: $facebook	
+
+.btn_facebook_out
+	color: $facebook
+	border: 2px solid $facebook
+	background-color: transparent	
+
+.btn_instagram
+	background-color: $instagram
+
+.btn_instagram_out
+	color: $instagram
+	border: 2px solid $instagram
+	background-color: transparent		
+
+.btn_google_plus
+	background-color: $google_plus	
+
+.btn_google_plus_out
+	color: $google_plus
+	border: 2px solid $google_plus
+	background-color: transparent	
+
+.btn_linkedin
+	background-color: $linkedin	
+
+.btn_linkedin_out
+	color: $linkedin
+	border: 2px solid $linkedin
+	background-color: transparent	
+
+.btn_youtube
+	background-color: $youtube
+
+.btn_youtube_out
+	color: $youtube
+	border: 2px solid $youtube
+	background-color: transparent		
+
+.btn_pinterest
+	background-color: $pinterest
+
+.btn_pinterest_out
+	color: $pinterest
+	border: 2px solid $pinterest
+	background-color: transparent		
+
+.btn_twitter
+	background-color: $twitter
+
+.btn_twitter_out
+	color: $twitter
+	borde: 2px solid $twitter
+	background-color: transparent		
+
+.btn_whatsapp
+	background-color: $whatsapp								
+
+.btn_whatsapp_out
+	color: $whatsapp
+	border: 2px solid $whatsapp
+	background-color: transparent	
+
+.btn_icon_squad
+	@extend %btn_icon
+	@include round($radius_small)
+
+.btn_icon_circle	
+	@extend %btn_icon
+	@include round_content(35px, true)	
+
+.btn_icon_block
+	color: #fff
+	display: block	
+	@include round($radius_small)
+	@include article(6, none, 5px, 1px)	
+	padding: 8px 10px
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	:first-child
+		position: relative
+		margin-left: 5px
+		padding: 10px 0px 10px 10px
+		border-left: 1px solid rgba(0, 0, 0, 0.2)
+		

@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.header
+	width: 100%
+	height: 500px
+	@include background_image("background.png")
+	.container
+		height: 100vh
+		display: flex
+		color: #ffffff
+		position: relative
+		align-items: center
+		justify-content: center
+		.header-box
+			top: 385px
+			width: 700px
+			display: flex
+			position: absolute
+			justify-content: space-between
+			article
+				height: 300px
+				box-shadow: $shadow
+				background-color: #ffffff
+				border-radius: $radius_small
+				@include article(5, #fff, 0px, 10px)
+				.text
+					width: 100%
+					@include flex
+					color: #FF80FF
+					padding: 10px 5px
+					font-size: 1.1rem
+					text-align: center
+					align-items: center
+					justify-content: center

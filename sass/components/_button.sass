@@ -1,0 +1,123 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/fonts'
+
+
+.btn
+	color: #fff
+	border: none
+	font-size: 1em
+	cursor: pointer
+	transition: 0.2s
+	padding: 10px 20px
+	font-weight: $weight_small
+	display: inline-block
+	text-transform: lowercase
+	font-family: $font_family
+	text-shadow: 1px 1px rgba(0,0,0,0.3)
+	background-color: $default
+	&:hover
+		color: #fff
+		text-decoration: none
+		background-color: $default_hover
+
+.btn_out
+	@extend.btn
+	text-shadow: none
+	color: $default
+	background-color: transparent
+	border: 1px solid $default
+	&:hover
+		text-shadow: none
+		color: $default_hover
+		background-color: transparent
+		border: 1px solid $default_hover		
+
+.btn_small
+	@extend.btn
+	padding: 8px 14px
+	font-size: 0.875em
+
+.btn_big
+	@extend.btn
+	padding: 11px 22px
+	font-size: 1.275em				
+
+// ======= green button
+
+.btn_green
+	@extend.btn
+	background-color: $green
+	&:hover
+		background-color: $green_hover
+
+.btn_green_out
+	@extend.btn
+	text-shadow: none
+	color: $green
+	background-color: transparent
+	border: 1px solid $green
+	&:hover
+		text-shadow: none
+		color: $green_hover
+		background-color: transparent
+		border: 1px solid $green_hover		
+
+// ======= blue button
+
+.btn_blue
+	@extend.btn
+	background-color: $blue
+	&:hover
+		background-color: $blue_hover	
+
+.btn_blue_out
+	@extend.btn
+	text-shadow: none
+	color: $blue
+	background-color: transparent
+	border: 1px solid $blue
+	&:hover
+		text-shadow: none
+		color: $blue_hover
+		background-color: transparent
+		border: 1px solid $blue_hover			
+
+// ======= yellow button
+
+.btn_yellow
+	@extend.btn
+	background-color: $yellow
+	&:hover
+		background-color: $yellow_hover
+
+.btn_yellow_out
+	@extend.btn
+	text-shadow: none
+	color: $yellow
+	background-color: transparent
+	border: 1px solid $yellow
+	&:hover
+		text-shadow: none
+		color: $yellow_hover
+		background-color: transparent
+		border: 1px solid $yellow_hover
+
+// ======= red button
+
+.btn_red
+	@extend.btn
+	background-color: $red
+	&:hover
+		background-color: $red_hover
+
+.btn_red_out
+	@extend.btn
+	text-shadow: none
+	color: $red
+	background-color: transparent
+	border: 1px solid $red
+	&:hover
+		text-shadow: none
+		color: $red_hover
+		background-color: transparent
+		border: 1px solid $red_hover

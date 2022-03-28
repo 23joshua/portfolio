@@ -1,0 +1,82 @@
+@use '../abstracts/fonts'
+@use '../abstracts/mixins' as *
+@use '../abstracts/variables' as *
+
+//========= trigger default
+
+%trigger
+	color: #fff
+	padding: 12px
+	font-size: $font_small
+	font-family: $font_family
+	text-shadow: 1px 1px rgba(0,0,0,0.3)
+	border: 1px solid $default_hover
+
+.trigger
+	@extend %trigger
+	background-color: $default	
+
+.trigger_out
+	@extend %trigger
+	text-shadow: none
+	color: $default
+	background: transparent
+	border-color: $default
+	@include round($radius_large)
+
+//========= trigger sucess
+
+.trigger_success
+	@extend %trigger
+	background: $green
+	border-color: $green_hover
+
+.trigger_success_out
+	@extend %trigger
+	text-shadow: none
+	color: $green
+	background: transparent
+	border-color: $green
+
+//========= trigger info	
+
+.trigger_info
+	@extend %trigger
+	background: $blue
+	border-color: $blue_hover
+
+.trigger_info_out
+	@extend %trigger
+	text-shadow: none
+	color: $blue
+	background: transparent
+	border-color: $blue
+
+//========= trigger alert
+
+.trigger_alert
+	@extend %trigger
+	background: $yellow
+	border-color: $yellow_hover
+
+.trigger_alert_out
+	@extend %trigger
+	text-shadow: none
+	background: transparent
+	color: $yellow
+	border-color: $yellow
+
+//========= trigger error
+
+.trigger_error
+	@extend %trigger
+	background: $red
+	border-color: $red_hover
+
+
+.trigger_error_out
+	@extend %trigger
+	text-shadow: none
+	color: $red
+	background: transparent
+	border-color: $red
