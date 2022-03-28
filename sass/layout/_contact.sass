@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint'
+
+.contact
+	z-index: -3
+	height: 500px
+	overflow-y: auto
+	@include round(5px)	
+	@include article(7, #31313A, 30px, 0px)
+	padding-left: 100px
+// .article
+// 	display: none	

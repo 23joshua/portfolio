@@ -17,19 +17,19 @@
 				<a href="" class="">js</a>
 			</div>
 			<nav class="nav">
-				<a href="">
+				<a href="" class="toggle">
 					<ion-icon name="person"></ion-icon>
 					<span>about me</span>
 				</a>
-				<a href="">
+				<a href="" class="toggle">
 					<ion-icon name="reader"></ion-icon>
 					<span>resume</span>
 				</a>
-				<a href="">
+				<a href="" class="toggle">
 					<ion-icon name="pencil"></ion-icon>
 					<span>works</span>
 				</a>
-				<a href="">
+				<a href="" class="toggle">
 					<ion-icon name="chatbox-ellipses"></ion-icon>
 					<span>contact</span>
 				</a>
@@ -61,7 +61,7 @@
 					</div>
 				</article>
 
-				<article class="about">
+				<article class="about article">
 					<div class="about-title">
 						<h2><span class="first-word">about</span> me</h2>
 					</div>
@@ -72,7 +72,7 @@
 							<li><ion-icon name="calendar"></ion-icon><strong>anos..........</strong> 28</li>
 							<li><ion-icon name="home"></ion-icon><strong>morada..........</strong> Maputo</li>
 							<li><ion-icon name="mail"></ion-icon><strong>email..........</strong> jushuashony@gmail.com</li>
-							<li><ion-icon name="logo-linkedin"></ion-icon><strong>linkedin..........</strong> <a href="https://www.linkedin.com/in/josué-chone-112b12141">Josué Chone</a></li>
+							<li><ion-icon name="logo-linkedin"></ion-icon><strong>linkedin..........</strong> <a href="https://www.linkedin.com/in/josué-chone-112b12141" target="blank">Josué Chone</a></li>
 						</ul>
 					</div>
 
@@ -95,17 +95,21 @@
 						<p class="skills">web designer</p>
 					</div>
 				</article>
-				<article class="resume">
+
+
+				<article class="resume article">
 					<div class="resume-title">
 						<h2><span class="first-word">meus</span>Experiencias</h2>
 					</div>
 				</article>
-				<article class="work">
+
+				<article class="work article">
 					<div class="work-title">
 						<h2><span class="first-word">meus</span>trabalhos</h2>
 					</div>
 				</article>
-				<article class="contact">
+
+				<article class="contact article">
 					<div class="contact-title">
 						<h2><span class="first-word">meus</span>Contactos</h2>
 					</div>
@@ -118,6 +122,18 @@
 	</footer> -->
 
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>					
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>	
+
+	<script>
+		//menu toggle 
+		let toggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.article');
+		// let main = document.querySelector('.main');
+
+		toggle.onclick = function(){
+			navigation.classList.toggle('active')	
+			main.classList.toggle('active')	
+		}
+	</script>					
 </body>
 </html>

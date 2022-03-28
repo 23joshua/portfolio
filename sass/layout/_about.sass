@@ -4,8 +4,7 @@
 
 .about
 	height: 500px
-	z-index: -3
-	// overflow-y: auto
+	overflow-y: auto
 	@include round(5px)	
 	@include article(7, #31313A, 30px, 0px)
 	padding-left: 100px
@@ -51,6 +50,9 @@
 					color: #fff
 					margin-right: 7px
 					text-transform: capitalize
+				a
+					cursor: pointer
+					color: rgb(255, 152, 0)	
 	.services-title
 		@extend .about-title
 		display: flex
