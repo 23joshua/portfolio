@@ -1,50 +1,6 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint'
 
 .about
-	@include background_image("about-bg.png")
-	.about-p
-		@include flex
-		margin-top: 40px
-		justify-content: center
-		position: relative
-		@include article(12, none, 0px, 10px)
-		padding: 70px 0px
-	.perfil
-		top: 109px
-		@include flex
-		position: absolute
-		justify-content: center
-		@include article(3, none, 10px, 10px)
-		img
-			border: 10px solid #fff
-			@include round_content(200px, $radius_round)	
-	.content-box
-		@include flex
-		box-shadow: $shadow
-		justify-content: flex-start
-		border-radius: $radius_small
-		@include article(6, #fff, 10px, 10px)
-		.pb
-			@include article(3, none, 10px, 10px)
-			img
-				@include round_content(100px, $radius_round)
-		.tb		
-			@include article(9, none, 10px, -28px)
-			p
-				text-align: left
-				font-size: 0.9rem
-	.content-box-2
-		@extend .content-box
-		justify-content: flex-end	
-		.pb
-			@include article(3, none, 10px, 10px)
-			img
-				@include round_content(100px, $radius_round)
-		.tb		
-			@include article(9, none, 10px, -23px)
-			p
-				text-align: right
-				font-size: 0.9rem
-			h2
-				text-align: right	
+	@include article(7, #31313A, 0px, 0px)

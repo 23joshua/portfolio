@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint'
+
+.container
+	display: flex
+	height: 100vh
+	align-items: center
+	justify-content: center
+	.header
+		display: block
+		@include article(1, transparent, 0px, 0px)
+		.logo
+			height: 70px
+			@include flex
+			align-items: center
+			margin-bottom: 15px
+			@include round(10px)
+			justify-content: center
+			background-color: #31313A
+			text-transform: uppercase
+			a
+				color: #fff
+				font-size: 30px
+				font-weight: $weight_small
+	.main
+		position: relative
+		height: 550px
+		@include article(11, red, 0px, 0px)	

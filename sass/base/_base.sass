@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *
+@use '../abstracts/fonts'
 
 *
 	margin: 0
@@ -8,14 +9,14 @@
 	-webkit-box-sizing: border-box
 
 body
-	background-color: #260424	
+	background-color: #1A1A1F
+	font-family: $font_family 		
 
 img
 	display: block
 	max-width: 100%
 	a
 		border: none
-		background-color: red
 
 ul
 	list-style: none
@@ -30,9 +31,9 @@ p
 	margin: 0 auto
 	padding: 0 10px
 	width: $container
-	transition: $seconds	
+	transition: $transition	
 
 .transition	
-	transition-duration: $seconds
-	-moz-transition-duration: $seconds
-	-webkit-transition-duration: $seconds	
+	transition-duration: $transition
+	-moz-transition-duration: $transition
+	-webkit-transition-duration: $transition	
