@@ -17,22 +17,22 @@
 				<a href="" class="">js</a>
 			</div>
 			<nav class="nav">
-				<a href="" class="toggle">
+				<span class="toggle" id="btn1" onclick="openAbout()">
 					<ion-icon name="person"></ion-icon>
 					<span>about me</span>
-				</a>
-				<a href="" class="toggle">
+				</span>
+				<span class="toggle" id="btn2" onclick="openResume()">
 					<ion-icon name="reader"></ion-icon>
 					<span>resume</span>
-				</a>
-				<a href="" class="toggle">
+				</span>
+				<span class="toggle" id="btn3" onclick="openWork()">
 					<ion-icon name="pencil"></ion-icon>
 					<span>works</span>
-				</a>
-				<a href="" class="toggle">
+				</span>
+				<span class="toggle" id="btn4" onclick="openContact()">
 					<ion-icon name="chatbox-ellipses"></ion-icon>
 					<span>contact</span>
-				</a>
+				</span>
 			</nav>
 		</header>
 		<main class="main">
@@ -56,12 +56,12 @@
 						</div>	
 						<div class="profile-links">
 							<a href="" class="may-cv">my cv</a>
-							<a href="#contact">contacto</a>
+							<span id="btn4" onclick="openContact()">contacto</span>
 						</div>		
 					</div>
 				</article>
 
-				<article class="about article">
+				<article class="about article" id="content1">
 					<div class="about-title">
 						<h2><span class="first-word">about</span> me</h2>
 					</div>
@@ -97,21 +97,47 @@
 				</article>
 
 
-				<article class="resume article">
+				<article class="resume article" id="content2">
 					<div class="resume-title">
-						<h2><span class="first-word">meus</span>Experiencias</h2>
+						<h2><span class="first-word">minhas</span> Experiencias</h2>
 					</div>
 				</article>
 
-				<article class="work article">
+				<article class="work article" id="content3">
 					<div class="work-title">
-						<h2><span class="first-word">meus</span>trabalhos</h2>
+						<h2><span class="first-word">meus</span> trabalhos</h2>
+					</div>
+					<div class="worl-content">
+						<figure>
+							<img src="assets/img/16.webp" alt="">
+							<figcaption>
+								<p>Cartaz de venda de detergentes</p>
+							</figcaption>
+						</figure>
+						<figure>
+							<img src="assets/img/menu2.webp" alt="">
+							<figcaption>
+								<p>Menu para take way</p>
+							</figcaption>
+						</figure>
+						<figure>
+							<img src="assets/img/10-g.webp" alt="">
+							<figcaption>
+								<p>Cartaz de venda de detergentes</p>
+							</figcaption>
+						</figure>
+						<figure>
+							<img src="assets/img/13-g.webp" alt="">
+							<figcaption>
+								<p>Cartaz de venda de detergentes</p>
+							</figcaption>
+						</figure>
 					</div>
 				</article>
 
-				<article class="contact article">
+				<article class="contact article" id="content4">
 					<div class="contact-title">
-						<h2><span class="first-word">meus</span>Contactos</h2>
+						<h2><span class="first-word">meus</span> Contactos</h2>
 					</div>
 				</article>
 			</section>
@@ -124,15 +150,55 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>	
 
-	<script>
-		//menu toggle 
-		let toggle = document.querySelector('.toggle');
-		let navigation = document.querySelector('.article');
-		// let main = document.querySelector('.main');
+	<script> 
+		var content1 = document.getElementById("content1");
+		var content2 = document.getElementById("content2");
+		var content3 = document.getElementById("content3");
+		var content4 = document.getElementById("content4");
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
 
-		toggle.onclick = function(){
-			navigation.classList.toggle('active')	
-			main.classList.toggle('active')	
+		function openAbout() {
+			content1.style.transform = "translateX(0px)";
+			content2.style.transform = "translateX(114%)";
+			content3.style.transform = "translateX(114%)";
+			content4.style.transform = "translateX(114%)";
+			btn1.style.color = "#FF9800";
+			btn2.style.color = "#FFF";
+			btn3.style.color = "#FFF";
+			btn4.style.color = "#FFF";
+		}
+		function openResume() {
+			content1.style.transform = "translateX(114%)";
+			content2.style.transform = "translateX(0px)";
+			content3.style.transform = "translateX(114%)";
+			content4.style.transform = "translateX(114%)";
+			btn1.style.color = "#FFF";
+			btn2.style.color = "#FF9800";
+			btn3.style.color = "#FFF";
+			btn4.style.color = "#FFF";
+		}
+		function openWork() {
+			content1.style.transform = "translateX(114%)";
+			content2.style.transform = "translateX(114%)";
+			content3.style.transform = "translateX(0px)";
+			content4.style.transform = "translateX(114%)";
+			btn1.style.color = "#FFF";
+			btn2.style.color = "#FFF";
+			btn3.style.color = "#FF9800";
+			btn4.style.color = "#FFF";
+		}
+		function openContact() {
+			content1.style.transform = "translateX(114%)";
+			content2.style.transform = "translateX(114%)";
+			content3.style.transform = "translateX(114%)";
+			content4.style.transform = "translateX(0px)";
+			btn1.style.color = "#FFF";
+			btn2.style.color = "#FFF";
+			btn3.style.color = "#FFF";
+			btn4.style.color = "#FF9800";
 		}
 	</script>					
 </body>

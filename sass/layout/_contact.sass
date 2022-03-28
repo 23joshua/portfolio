@@ -9,5 +9,24 @@
 	@include round(5px)	
 	@include article(7, #31313A, 30px, 0px)
 	padding-left: 100px
-// .article
-// 	display: none	
+	.contact-title
+		height: 70px
+		line-height: 1.5
+		&:after
+			content: ""
+			width: 100%
+			height: 1px
+			position: absolute
+			left: 0
+			right: 0
+			top: 80px
+			background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%)
+		h2
+			color: #fff
+			font-size: 1.6rem
+			position: relative
+			line-height: 70px
+			font-weight: $weight_small
+			text-transform: capitalize
+			.first-word
+				color: #ff9800

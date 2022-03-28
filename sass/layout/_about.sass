@@ -18,17 +18,19 @@
 			position: absolute
 			left: 0
 			right: 0
-			top: 90px
+			top: 80px
 			background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%)
 		h2
 			color: #fff
 			font-size: 1.6rem
 			position: relative
+			line-height: 70px
 			font-weight: $weight_small
 			text-transform: capitalize
 			.first-word
 				color: #ff9800
 	.about-text
+		margin-top: 30px
 		p
 			color: rgba(255, 255, 255, 0.55)
 			line-height: 1.5
@@ -71,9 +73,10 @@
 	.quote-title
 		@extend .about-title
 		&:after
-			top: 552px	
+			top: 573px	
 	.quote	
 		display: flex
+		margin-top: 10px
 		align-items: center
 		justify-content: center	
 		flex-direction: column
@@ -81,7 +84,8 @@
 			line-height: 1.5
 			text-align: center
 			font-size: 1rem
-			font-weight: bold					
+			font-weight: bold	
+			padding: 0px 30px				
 			color: rgba(255, 255, 255, 0.55)
 		img
 			margin-top: 20px
@@ -93,4 +97,4 @@
 		.skills
 			font-size: 1.2rem
 			text-align: center
-			color: rgb(255, 152, 0)	
+			color: rgb(255, 152, 0)				
