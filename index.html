@@ -107,30 +107,66 @@
 					<div class="work-title">
 						<h2><span class="first-word">meus</span> trabalhos</h2>
 					</div>
+					<ul class="ul-menu">
+						<li class="list active" data-filter="all">all</li>
+						<li class="list" data-filter="cartaz">cartaz</li>
+						<li class="list" data-filter="videos">videos</li>
+						<li class="list" data-filter="sites">sites</li>
+					</ul>
 					<div class="worl-content">
-						<figure>
+						<figure class="itemBox" data-item="cartaz">
 							<img src="assets/img/16.webp" alt="">
 							<figcaption>
 								<p>Cartaz de venda de detergentes</p>
 							</figcaption>
 						</figure>
-						<figure>
+						<figure class="itemBox" data-item="cartaz">
 							<img src="assets/img/menu2.webp" alt="">
 							<figcaption>
 								<p>Menu para take way</p>
 							</figcaption>
 						</figure>
-						<figure>
+						<figure class="itemBox" data-item="cartaz">
 							<img src="assets/img/10-g.webp" alt="">
 							<figcaption>
 								<p>Cartaz de venda de detergentes</p>
 							</figcaption>
 						</figure>
-						<figure>
+						<figure class="itemBox" data-item="cartaz">
 							<img src="assets/img/13-g.webp" alt="">
 							<figcaption>
 								<p>Cartaz de venda de detergentes</p>
 							</figcaption>
+						</figure>
+						<figure class="itemBox" data-item="videos">
+							<img src="assets/img/13-g.webp" alt="">
+							<figcaption>
+								<p>Cartaz de venda de detergentes</p>
+							</figcaption>
+						</figure>
+						<figure class="itemBox" data-item="sites">
+							<a href="">
+								<img src="assets/img/13-g.webp" alt="">
+								<figcaption>
+									<p>Cartaz de venda de detergentes</p>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="itemBox" data-item="sites">
+							<a href="">
+								<img src="assets/img/13-g.webp" alt="">
+								<figcaption>
+									<p>Cartaz de venda de detergentes</p>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="itemBox" data-item="sites">
+							<a href="">
+								<img src="assets/img/13-g.webp" alt="">
+								<figcaption>
+									<p>Cartaz de venda de detergentes</p>
+								</figcaption>
+							</a>
 						</figure>
 					</div>
 				</article>
@@ -199,6 +235,31 @@
 			btn2.style.color = "#FFF";
 			btn3.style.color = "#FFF";
 			btn4.style.color = "#FF9800";
+		}
+	
+		let list = document.querySelectorAll('.list');
+		let itemBox = document.querySelectorAll('.itemBox');
+
+		for (let i = 0; i<list.lenght; i++) {
+			list[i].addEventListener('click', function() {
+				for (let j = 0; j<list.length; j++) {
+					list[j].classList.remove('active');
+				}
+				this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k<itemBox.lenght; k++) {
+                	itemBox[k].classList.remove('active');
+                	itemBox[k].classList.add('hide');
+
+                	if (itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                		itemBox[k].classList.remove('hide');
+                		itemBox[k].classList.add('active');
+
+                	}
+                }
+			})
 		}
 	</script>					
 </body>

@@ -29,6 +29,32 @@
 			text-transform: capitalize
 			.first-word
 				color: #ff9800
+	.ul-menu
+		@include flex
+		justify-content: flex-end
+		margin-right: 20px
+		height: 50px
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 130px
+			width: 100%
+			height: 1px
+			background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%)
+		.list
+			color: #fff
+			font-size: 16px
+			font-weight: $weight_small
+			line-height: 50px
+			text-transform: capitalize			
+			padding: 0px 10px
+			cursor: pointer
+			&:hover
+				color: rgb(255, 152, 0)
+		.active
+			color: rgb(255, 152, 0)		
 	.worl-content
 		@include flex
 		justify-content: space-between
@@ -36,11 +62,11 @@
 			content: ""
 			position: absolute
 			left: 57.5%
-			top: 80px
+			top: 130px
 			width: 1px
 			height: 100%
 			background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%)
-		figure
+		.itemBox
 			@include article(6, transparent, 0px, 0px)	
 			figcaption
 				p
@@ -49,3 +75,5 @@
 					font-weight: bold				
 					text-align: center
 					color: rgba(255, 255, 255, 0.3)
+		.itemBox.hide
+			display: none			
