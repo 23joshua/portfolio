@@ -32,11 +32,14 @@
 			@include breakpoint(0px $breakpoint_huge)
 				@include article(2, #31313A, 0px, 10px)	
 			@include breakpoint(0px $breakpoint_xsmall)
-				@include article(3, #31313A, 0px, 3px)	
+				@include article(2, #31313A, 0px, 3px)
+				height: 40px	
 			a
 				color: #fff
 				font-size: 30px
 				font-weight: $weight_small
+				@include breakpoint(0px $breakpoint_xsmall)
+					font-size: 15px
 		@include breakpoint(0px $breakpoint_huge)
 			display: flex
 			align-items: center

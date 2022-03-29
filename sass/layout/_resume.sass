@@ -27,7 +27,9 @@
 			font-weight: $weight_small
 			text-transform: capitalize
 			.first-word
-				color: #ff9800	
+				color: #ff9800
+			@include breakpoint(0px $breakpoint_xxsmall)
+				font-size: 1.2rem		
 .article
 	transition: $transition	
 	position: absolute
@@ -54,7 +56,9 @@
 			top: 14px
 			left: -4px
 			@include round_content(30px, true)
-			background-color: rgba(255, 255, 255, 0.3)	
+			background-color: rgba(255, 255, 255, 0.3)
+		@include breakpoint(0px $breakpoint_xxsmall)
+			font-size: 1.2rem		
 	.aviso
 		text-align: center
 		padding: 10px 10px			
