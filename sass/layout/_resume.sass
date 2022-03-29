@@ -55,6 +55,41 @@
 			left: -4px
 			@include round_content(30px, true)
 			background-color: rgba(255, 255, 255, 0.3)	
+	.aviso
+		text-align: center
+		padding: 10px 10px			
+		font-size: 18px
+		margin-top: 20px
+		p
+			color: #fff
+		.site
+			color: rgb(255, 152, 0)	
+	.about-text
+		margin-top: 30px
+		p
+			color: rgba(255, 255, 255, 0.55)
+			line-height: 1.5
+			font-size: 1.2rem
+			font-weight: bold			
+		.about-list
+			margin-top: 20px
+			li
+				display: flex
+				align-items: center
+				margin-bottom: 7px
+				color: rgba(255, 255, 255, 0.55)
+				ion-icon
+					font-size: 1.2rems
+					margin-right: 10px
+					color: #fff
+				strong
+					font-weight: bold
+					color: #fff
+					margin-right: 7px
+					text-transform: capitalize
+				a
+					cursor: pointer
+					color: rgb(255, 152, 0)			
 	@include breakpoint(0px $breakpoint_huge)
 		top: -36px
 		z-index: 10	
