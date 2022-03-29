@@ -14,6 +14,8 @@
 		flex-direction: row
 		justify-content: center
 		@include article(10, #31313A, 0px, 10px)
+	@include breakpoint(0px $breakpoint_xsmall)
+		@include article(9, #31313A, 0px, 3px)	
 	.toggle
 		color: #fff
 		display: flex
@@ -43,5 +45,7 @@
 			margin: 0px 10px	
 		@include breakpoint(0px $breakpoint_xsmall)
 			margin: 0px 5px	
+		@include breakpoint(0px $breakpoint_xsmall)
+			text-align: center	
 	#btn1
 		color: rgb(255, 152, 0)	
