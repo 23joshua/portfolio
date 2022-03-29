@@ -8,6 +8,12 @@
 	@include round(10px)
 	background-color: #31313A
 	font-family: $font_family
+	@include breakpoint(0px $breakpoint_huge)
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: center
+		@include article(10, #31313A, 0px, 10px)
 	.toggle
 		color: #fff
 		display: flex
@@ -33,5 +39,7 @@
 		ion-icon
 			font-size: 1.5rem
 			margin-bottom: 10px
+		@include breakpoint(0px $breakpoint_huge)
+			margin: 0px 10px	
 	#btn1
 		color: rgb(255, 152, 0)	

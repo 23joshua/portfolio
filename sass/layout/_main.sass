@@ -7,6 +7,12 @@
 	height: 100vh
 	align-items: center
 	justify-content: center
+	@include breakpoint(0px $breakpoint_huge)
+		width: 100%
+		flex-wrap: wrap
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
 	.header
 		display: block
 		z-index: 10
@@ -20,11 +26,20 @@
 			justify-content: center
 			background-color: #31313A
 			text-transform: uppercase
+			@include breakpoint(0px $breakpoint_huge)
+				@include article(2, #31313A, 0px, 10px)	
 			a
 				color: #fff
 				font-size: 30px
 				font-weight: $weight_small
+		@include breakpoint(0px $breakpoint_huge)
+			display: flex
+			align-items: center
+			@include article(12, transparent, 0px, 0px)			
 	.main
 		position: relative
 		height: 550px
-		@include article(11, transparent, 0px, 0px)	
+		@include article(11, transparent, 0px, 0px)
+		@include breakpoint(0px $breakpoint_huge)
+			position: none
+			@include article(12, transparent, 0px, 0px)	

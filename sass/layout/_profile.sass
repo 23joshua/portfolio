@@ -6,6 +6,15 @@ section
 	position: relative
 	@include flex
 	justify-content: flex-end
+	@include breakpoint(0px $breakpoint_huge)
+		height: 100vh
+		display: flex
+		position: none
+		flex-wrap: wrap
+		align-items: center
+		flex-direction: column
+		justify-content: center
+		@include article(12, transparent, 0px, 0px)
 	.content-profile
 		position: fixed
 		width: 520px
@@ -15,6 +24,17 @@ section
 		z-index: 1
 		@include round(5px)
 		background-color: rgb(33, 33, 38, 0.6)
+		@include breakpoint(0px $breakpoint_huge)
+			position: none
+			top: 93px
+			left: 188px
+		@include breakpoint($breakpoint_medium $breakpoint_large)
+			left: 132px	
+		@include breakpoint($breakpoint_xmedium $breakpoint_medium)	
+			left: 120px
+		@include breakpoint(0px $breakpoint_xmedium)
+			left: 0	
+			@include article(5.5, transparent, 0px, 0px)
 		.profile
 			top: 0
 			left: 0
