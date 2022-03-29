@@ -70,7 +70,9 @@
 			color: rgba(255, 255, 255, 0.55)
 			line-height: 1.5
 			font-size: 1.2rem
-			font-weight: bold			
+			font-weight: bold	
+			@include breakpoint(0px $breakpoint_xmedium)
+				text-align: center		
 		.about-list
 			margin-top: 20px
 			li
