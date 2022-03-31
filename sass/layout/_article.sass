@@ -16,6 +16,8 @@ section
 		flex-direction: column
 		justify-content: center
 		@include article(12, transparent, 0px, 0px)
+	@include breakpoint(0px $breakpoint_xmedium)
+		margin-top: -20px	
 	.article
 		position: absolute
 		overflow-x: hidden
@@ -29,7 +31,9 @@ section
 			@include round(15px)
 		&::-webkit-scrollbar-thumb
 			background: #212126
-			@include round(15px)	
+			@include round(15px)
+		@include breakpoint(0px $breakpoint_xmedium)
+			height: 100%		
 		.title
 			height: 70px
 			line-height: 70px
