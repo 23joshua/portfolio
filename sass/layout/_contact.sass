@@ -6,27 +6,49 @@
 	height: 500px
 	overflow-y: auto
 	@include round(5px)
-	.contact-title
-		height: 70px
-		line-height: 1.5
-		&:after
-			content: ""
-			width: 100%
-			height: 1px
-			position: absolute
-			left: 0
-			right: 0
-			top: 80px
-			background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%)
-		h2
-			color: #fff
-			font-size: 1.6rem
-			position: relative
-			line-height: 70px
-			font-weight: $weight_small
+	form
+		@include flex
+		align-items: center
+		justify-content: space-between
+		input,
+		textarea
+			border: 0px
+			height: 50px
+			outline: 0px
+			appearance: none
+			font-size: 16px
+			transition: $transition
+			text-transform: capitalize			
+			border-bottom: 1px solid #eee
+			color: rgba(255, 255, 255, 0.85)
+			&:focus
+				border-top: 0px			
+				border-left: 0px
+				border-right: 0px
+				border-color: #ff9800
+		input	
+			@include article(6, transparent, 10px, 10px)
+			@include breakpoint(0px $breakpoint_xmedium)
+				@include article(12, transparent, 10px, 0px)
+		textarea
+			text-align: left
+			height: 100px
+			@include article(12, transparent, 10px, 10px)
+			&:focus
+				border-top: 0px			
+				border-left: 0px
+				border-right: 0px
+				border-color: #ff9800	
+		button
+			display: flex
+			color: #ff9800
+			font-size: 15px
+			margin-top: 10px
+			@include round(5px)
+			align-items: center
 			text-transform: capitalize
-			.first-word
-				color: #ff9800
-			@include breakpoint(0px $breakpoint_xxsmall)
-				font-size: 1.2rem
-					
+			background-color: transparent
+			&:hover
+				background-color: #ff9800
+			ion-icon
+				margin-right: 10px

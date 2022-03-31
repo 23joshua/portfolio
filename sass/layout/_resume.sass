@@ -76,26 +76,29 @@
 			font-size: 1.2rem
 			font-weight: bold	
 			@include breakpoint(0px $breakpoint_xmedium)
-				text-align: center		
-		.about-list
-			margin-top: 20px
-			li
-				display: flex
-				align-items: center
-				margin-bottom: 7px
-				color: rgba(255, 255, 255, 0.55)
-				ion-icon
-					font-size: 1.2rems
-					margin-right: 10px
-					color: #fff
-				strong
-					font-weight: bold
-					color: #fff
-					margin-right: 7px
-					text-transform: capitalize
-				a
-					cursor: pointer
-					color: rgb(255, 152, 0)			
+				text-align: center
+	.about-list
+		@include flex
+		margin-top: 20px
+		about-list: center
+		justify-content: space-between
+		li
+			display: flex
+			align-items: center
+			margin-bottom: 7px
+			color: rgba(255, 255, 255, 0.55)
+			ion-icon
+				font-size: 1.2rems
+				margin-right: 10px
+				color: #fff
+			strong
+				font-weight: bold
+				color: #fff
+				margin-right: 7px
+				text-transform: capitalize
+			a
+				cursor: pointer
+				color: rgb(255, 152, 0)			
 	@include breakpoint(0px $breakpoint_huge)
 		top: -36px
 		z-index: 10	
